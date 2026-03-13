@@ -12,60 +12,45 @@ export function Home() {
   const [activeTab, setActiveTab] = useState("JHAPKI");
   const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
 
-  const coreSkillsData = [
+  const skillsData = [
     {
-      name: "2D Animation",
-      tools: [
-        { name: "After Effects", icon: "✨" },
-        { name: "Premiere Pro", icon: "🎬" },
-        { name: "Photoshop", icon: "🎨" },
-        { name: "Illustrator", icon: "✒️" }
-      ]
+      category: "Core Skills",
+      items: ["Creative Production", "Project Coordination", "Concept Development", "Worldbuilding", "Visual Storytelling"]
     },
     {
-      name: "Stop Motion",
-      tools: [
-        { name: "Premiere Pro", icon: "🎬" },
-        { name: "After Effects", icon: "✨" }
-      ]
+      category: "Technical Skills",
+      items: ["3D Sculpting", "Environment Development", "Retopology", "Texturing"]
     },
     {
-      name: "World Building",
-      tools: [
-        { name: "Unreal Engine", icon: "🎮" },
-        { name: "Maya / Blender", icon: "🧊" },
-        { name: "Photoshop", icon: "🎨" }
-      ]
+      category: "Creative Skills",
+      items: ["Storyboarding", "Animatic Development", "Experimental Animation"]
     },
     {
-      name: "Illustration",
-      tools: [
-        { name: "Illustrator", icon: "✒️" },
-        { name: "Photoshop", icon: "🎨" }
-      ]
+      category: "AI Skills",
+      items: ["Prompt Design", "AI Image Generation", "Generative Concept Development"]
+    }
+  ];
+
+  const toolsData = [
+    {
+      category: "3D & Environment Tools",
+      items: ["ZBrush", "Blender", "Autodesk Maya", "Unreal Engine", "Substance Painter"]
     },
     {
-      name: "Creative Direction",
-      tools: [
-        { name: "AI Tools", icon: "🤖" },
-        { name: "Photoshop", icon: "🎨" },
-        { name: "Premiere Pro", icon: "🎬" }
-      ]
+      category: "Design & Editing",
+      items: ["Adobe After Effects", "Adobe Premiere Pro", "Adobe Illustrator", "Procreate"]
     },
     {
-      name: "Storyboarding",
-      tools: [
-        { name: "Photoshop", icon: "🎨" },
-        { name: "Illustrator", icon: "✒️" }
-      ]
+      category: "AI & Generative Tools",
+      items: ["ChatGPT", "Gemini", "Nano Banana", "Suno AI"]
     }
   ];
 
   const projectsData = [
     { 
       name: "Jhapki", 
-      skills: ["Stop Motion", "Storyboarding", "2D Animation"], 
-      tools: ["Premiere Pro", "After Effects", "Photoshop"],
+      skills: ["Experimental Animation", "Storyboarding", "Creative Production"], 
+      tools: ["Adobe Premiere Pro", "Adobe After Effects"],
       link: "/projects/jhapki",
       startDate: "Oct 2023",
       endDate: "Nov 2023",
@@ -80,8 +65,8 @@ export function Home() {
     },
     { 
       name: "Leher", 
-      skills: ["2D Animation", "Storyboarding", "Illustration"], 
-      tools: ["Premiere Pro", "After Effects", "Photoshop", "Illustrator"],
+      skills: ["Experimental Animation", "Storyboarding", "Visual Storytelling"], 
+      tools: ["Adobe Premiere Pro", "Adobe After Effects", "Procreate"],
       link: "/projects/leher",
       startDate: "Jan 2024",
       endDate: "Jan 2024",
@@ -95,8 +80,8 @@ export function Home() {
     },
     { 
       name: "Nivara", 
-      skills: ["World Building", "Illustration", "Creative Direction"], 
-      tools: ["Photoshop", "AI Tools"],
+      skills: ["Worldbuilding", "Concept Development", "Generative Concept Development"], 
+      tools: ["ChatGPT", "Gemini", "Nano Banana"],
       link: "/projects/nivara",
       startDate: "Feb 2024",
       endDate: "Mar 2024",
@@ -111,8 +96,8 @@ export function Home() {
     },
     { 
       name: "Bvlgari Ad", 
-      skills: ["Creative Direction"], 
-      tools: ["AI Tools", "Premiere Pro"],
+      skills: ["Prompt Design", "AI Image Generation", "Visual Storytelling"], 
+      tools: ["ChatGPT", "Nano Banana", "Suno AI", "Adobe After Effects"],
       link: "/projects/bulgari",
       startDate: "Apr 2024",
       endDate: "Apr 2024",
@@ -126,8 +111,8 @@ export function Home() {
     },
     { 
       name: "Mata", 
-      skills: ["World Building"], 
-      tools: ["Unreal Engine", "Maya / Blender"],
+      skills: ["3D Sculpting", "Environment Development", "Retopology", "Texturing"], 
+      tools: ["ZBrush", "Autodesk Maya", "Substance Painter", "Unreal Engine"],
       link: "/projects/animation-3d",
       startDate: "May 2024",
       endDate: "Jun 2024",
@@ -189,28 +174,46 @@ export function Home() {
             </p>
           </FadeIn>
 
-          {/* Core Skills & Toolkit Mapping */}
+          {/* Skills & Toolkit Mapping */}
           <FadeIn delay={0.6} className="w-full max-w-5xl mx-auto mb-16">
-            <h3 className="text-xl md:text-2xl font-bold text-primary uppercase tracking-widest mb-8 border-b border-white/10 pb-4">Core Skills & Toolkit</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
-              {coreSkillsData.map((skillGroup) => (
-                <div key={skillGroup.name} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-colors">
-                  <button 
-                    onClick={() => handleSkillClick(skillGroup.name)}
-                    className={`text-xl font-bold uppercase tracking-wider mb-4 transition-colors ${selectedSkill === skillGroup.name ? 'text-primary' : 'text-white hover:text-primary/80'}`}
-                  >
-                    {skillGroup.name}
-                  </button>
+            <h3 className="text-xl md:text-2xl font-bold text-primary uppercase tracking-widest mb-8 border-b border-white/10 pb-4">Skills</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left mb-16">
+              {skillsData.map((skillGroup) => (
+                <div key={skillGroup.category} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-colors">
+                  <h4 className="text-xl font-bold uppercase tracking-wider mb-4 text-white">
+                    {skillGroup.category}
+                  </h4>
                   <div className="space-y-3">
-                    {skillGroup.tools.map(tool => (
-                      <div key={tool.name} className="flex items-center gap-3">
-                        <div className="w-px h-4 bg-white/20 ml-2" />
+                    {skillGroup.items.map(skill => (
+                      <div key={skill} className="flex items-center gap-3">
                         <button
-                          onClick={() => handleSkillClick(tool.name)}
-                          className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-mono transition-all ${selectedSkill === tool.name ? 'bg-primary/20 text-primary border border-primary/50' : 'bg-black/40 text-gray-400 border border-transparent hover:bg-white/10 hover:text-white'}`}
+                          onClick={() => handleSkillClick(skill)}
+                          className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-mono transition-all w-full text-left ${selectedSkill === skill ? 'bg-primary/20 text-primary border border-primary/50' : 'bg-black/40 text-gray-400 border border-transparent hover:bg-white/10 hover:text-white'}`}
                         >
-                          <span>{tool.icon}</span>
-                          <span>{tool.name}</span>
+                          <span>{skill}</span>
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <h3 className="text-xl md:text-2xl font-bold text-primary uppercase tracking-widest mb-8 border-b border-white/10 pb-4">Tools & Software</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+              {toolsData.map((toolGroup) => (
+                <div key={toolGroup.category} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-colors">
+                  <h4 className="text-xl font-bold uppercase tracking-wider mb-4 text-white">
+                    {toolGroup.category}
+                  </h4>
+                  <div className="space-y-3">
+                    {toolGroup.items.map(tool => (
+                      <div key={tool} className="flex items-center gap-3">
+                        <button
+                          onClick={() => handleSkillClick(tool)}
+                          className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-mono transition-all w-full text-left ${selectedSkill === tool ? 'bg-primary/20 text-primary border border-primary/50' : 'bg-black/40 text-gray-400 border border-transparent hover:bg-white/10 hover:text-white'}`}
+                        >
+                          <span>{tool}</span>
                         </button>
                       </div>
                     ))}

@@ -5,6 +5,7 @@ import { WorkflowDiagram } from "@/src/components/WorkflowDiagram";
 import { FadeIn } from "@/src/components/FadeIn";
 import { VideoPlayer } from "@/src/components/VideoPlayer";
 import { ProjectGantt } from "@/src/components/ProjectGantt";
+import { ProjectSection } from "@/src/components/ProjectSection";
 
 export function Jhapki() {
   const remainingImages = [
@@ -27,74 +28,164 @@ export function Jhapki() {
       title="JHAPKI"
       tagline="A tactile exploration of dreams and reality through stop-motion animation."
     >
-      <ScopeGrid
-        items={[
-          { label: "Medium", value: "Stop Motion Animation" },
-          { label: "Role", value: "Director, Animator, Set Designer" },
-          { label: "Output", value: "Short Film & BTS Documentation" },
-          { label: "Materials", value: "Clay, Paper, Wire, Found Objects" },
-        ]}
-      />
+      <ProjectSection title="Project Scope">
+        <ScopeGrid
+          items={[
+            { label: "Project Type", value: "Stop Motion Short Film" },
+            { label: "Duration", value: "4 Weeks" },
+            { label: "Team Size", value: "7 Members" },
+            { label: "Role", value: "Director & Production Lead" },
+          ]}
+        />
+        <div className="mt-8 text-gray-400 leading-relaxed text-lg space-y-4">
+          <p>
+            Jhapki is a short stop-motion film developed around the playful dynamics of classroom life. Inspired by the concept of "backbench culture," the narrative revolves around a subtle and humorous crush story unfolding between two students.
+          </p>
+          <p>
+            The project aimed to explore how small emotional moments in everyday environments can be translated into a stylized stop-motion format, utilizing physical materials like clay, paper, and wire.
+          </p>
+        </div>
+      </ProjectSection>
 
-      <FadeIn className="mb-12">
-        <h3 className="text-2xl font-bold text-primary mb-6 uppercase tracking-wider">Final Film</h3>
+      <ProjectSection title="Creative Objective">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="text-gray-400 leading-relaxed text-lg space-y-4">
+            <p>
+              The theme for this project was provided by the faculty and centered around the idea of classroom life and backbenchers. Our objective was to interpret this theme in a way that felt relatable, light-hearted, and emotionally engaging.
+            </p>
+            <p>
+              Instead of focusing only on typical classroom chaos, we chose to explore the small and subtle moments that often happen in the back rows of a class. The goal was to create a short narrative around a cute classroom crush, capturing the innocence, awkwardness, and quiet interactions that many students experience during their school life. Through expressive animation and simple storytelling, we aimed to evoke a sense of nostalgia and warmth for the audience.
+            </p>
+          </div>
+          <img src="https://i.postimg.cc/vDdfKjNr/35796491-6996-4603-9b59-e17b5d2a8ae2.jpg" alt="Jhapki Concept" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />
+        </div>
+      </ProjectSection>
+
+      <ProjectSection title="Roles & Responsibilities">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="text-gray-400 leading-relaxed text-lg space-y-4">
+            <p><strong className="text-white">My Role:</strong> Director & Production Lead</p>
+            <p>Responsibilities included:</p>
+            <ul className="list-disc list-inside space-y-2 ml-4">
+              <li>Leading the creative direction of the project</li>
+              <li>Developing the core concept and narrative framework</li>
+              <li>Designing visual assets and key imagery</li>
+              <li>Coordinating team workflow and production stages</li>
+              <li>Ensuring visual consistency across the project</li>
+            </ul>
+          </div>
+          <img src="https://i.postimg.cc/GTrLjvzf/38772ed2-d0f4-40e1-be3a-be23a4cae794.jpg" alt="Jhapki Role" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />
+        </div>
+      </ProjectSection>
+
+      <ProjectSection title="Production Timeline & Pipeline">
+        <div className="mb-8">
+          <h4 className="text-xl font-bold text-white mb-4">Pipeline</h4>
+          <div className="flex flex-wrap items-center gap-2 text-primary font-mono text-sm md:text-base">
+            <span>Concept</span>
+            <span>&darr;</span>
+            <span>Storyboarding</span>
+            <span>&darr;</span>
+            <span>Character & Prop Creation</span>
+            <span>&darr;</span>
+            <span>Set Construction</span>
+            <span>&darr;</span>
+            <span>Stop Motion Photography</span>
+            <span>&darr;</span>
+            <span>Editing & Sound</span>
+          </div>
+        </div>
+
+        <h4 className="text-xl font-bold text-white mb-4">Timeline</h4>
+        <div className="space-y-6 text-gray-400 leading-relaxed text-lg mb-8">
+          <div>
+            <strong className="text-white block mb-2">Week 1 – Pre-Production</strong>
+            <ul className="list-disc list-inside ml-4">
+              <li>Concept development and interpretation of theme</li>
+              <li>Storyboarding and visual planning</li>
+              <li>Character design and material sourcing</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="text-white block mb-2">Week 2 – Asset Creation</strong>
+            <ul className="list-disc list-inside ml-4">
+              <li>Set design and construction</li>
+              <li>Prop creation and character preparation</li>
+              <li>Rigging armatures and setting up lighting</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="text-white block mb-2">Week 3 – Production</strong>
+            <ul className="list-disc list-inside ml-4">
+              <li>Stop-motion shooting</li>
+              <li>Frame-by-frame animation and micro-movements</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="text-white block mb-2">Week 4 – Post Production</strong>
+            <ul className="list-disc list-inside ml-4">
+              <li>Video editing and sequence compilation</li>
+              <li>Color grading and sound design</li>
+            </ul>
+          </div>
+        </div>
+
+        <ProjectGantt 
+          totalWeeks={4}
+          tasks={[
+            { name: "Pre-Production", startWeek: 0, durationWeeks: 1 },
+            { name: "Asset Creation", startWeek: 1, durationWeeks: 1 },
+            { name: "Production", startWeek: 2, durationWeeks: 1 },
+            { name: "Post Production", startWeek: 3, durationWeeks: 1 }
+          ]} 
+        />
+      </ProjectSection>
+
+      <ProjectSection title="Deliverables">
+        <p className="text-gray-400 leading-relaxed text-lg mb-6">
+          Short Stop-Motion Film & Behind-the-Scenes Documentation.
+        </p>
         <div className="rounded-xl overflow-hidden border border-white/10">
           <VideoPlayer url="https://www.youtube.com/embed/YOUR_JHAPKI_VIDEO_ID" />
         </div>
-      </FadeIn>
+      </ProjectSection>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-        <FadeIn>
-          <h3 className="text-2xl font-bold text-primary mb-4 uppercase tracking-wider">Concept</h3>
-          <p className="text-gray-400 leading-relaxed text-lg mb-6">
-            "Jhapki" (a short nap or doze) explores the surreal, fleeting moments between wakefulness and sleep. The film uses physical materials to ground abstract, dream-like sequences in a tangible reality.
-          </p>
-          <img src="https://i.postimg.cc/vDdfKjNr/35796491-6996-4603-9b59-e17b5d2a8ae2.jpg" alt="Jhapki Concept" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />
-        </FadeIn>
-        <FadeIn delay={0.2}>
-          <h3 className="text-2xl font-bold text-primary mb-4 uppercase tracking-wider">Process</h3>
-          <p className="text-gray-400 leading-relaxed text-lg mb-6">
-            Every frame was meticulously crafted by hand. The sets were built using everyday materials, emphasizing texture and lighting to create a moody, atmospheric environment.
-          </p>
-          <img src="https://i.postimg.cc/GTrLjvzf/38772ed2-d0f4-40e1-be3a-be23a4cae794.jpg" alt="Jhapki Process" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />
-        </FadeIn>
-      </div>
+      <ProjectSection title="Tools & Software Used">
+        <ul className="list-disc list-inside text-gray-400 leading-relaxed text-lg space-y-2">
+          <li><strong className="text-white">Physical Materials</strong> – Clay, paper, wire, found objects for set and character design</li>
+          <li><strong className="text-white">Adobe Premiere Pro</strong> – Video compilation and editing</li>
+          <li><strong className="text-white">Adobe After Effects</strong> – Compositing and visual enhancements</li>
+          <li><strong className="text-white">Adobe Photoshop</strong> – Storyboarding and asset preparation</li>
+        </ul>
+      </ProjectSection>
 
-      <FadeIn className="mb-12">
-        <h3 className="text-2xl font-bold text-primary mb-6 uppercase tracking-wider">Production Timeline</h3>
-        <ProjectGantt 
-          totalWeeks={6}
-          tasks={[
-            { name: "Pre-production & Storyboarding", startWeek: 0, durationWeeks: 1 },
-            { name: "Set Construction & Rigging", startWeek: 1, durationWeeks: 2 },
-            { name: "Stop Motion Animation", startWeek: 2, durationWeeks: 3 },
-            { name: "Post-production & Sound", startWeek: 5, durationWeeks: 1 }
-          ]} 
-        />
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-8">
-          <Timeline
-            items={[
-              { title: "Pre-production", desc: "Storyboarding, character design, and material sourcing." },
-              { title: "Set Construction", desc: "Building miniature sets, rigging armatures, and setting up lighting." },
-              { title: "Animation", desc: "Frame-by-frame shooting, adjusting micro-movements to bring characters to life." },
-              { title: "Post-production", desc: "Color grading, sound design, and final compositing." },
-            ]}
-          />
-          <div className="grid grid-cols-2 gap-4">
-            <img src="https://i.postimg.cc/0rqD43Bm/51582182-a166-4285-ac07-627e50ff11da.jpg" alt="Timeline 1" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />
-            <img src="https://i.postimg.cc/w3cLYVCw/5b1e72a2-c576-42ee-907d-4ca76cca8f7a.jpg" alt="Timeline 2" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />
+      <ProjectSection title="Challenges & Solutions">
+        <div className="space-y-6 text-gray-400 leading-relaxed text-lg">
+          <div>
+            <strong className="text-white block mb-2">Challenge 1</strong>
+            <p>Stop-motion animation is highly time-intensive, making it difficult to complete all planned scenes within the available schedule.</p>
+            <strong className="text-white block mt-2 mb-2">Solution</strong>
+            <p>Scenes were prioritized and simplified to ensure the core narrative remained intact while maintaining production efficiency and meeting the deadline.</p>
+          </div>
+          <div>
+            <strong className="text-white block mb-2">Challenge 2</strong>
+            <p>Managing coordination across multiple team members working on different physical tasks simultaneously.</p>
+            <strong className="text-white block mt-2 mb-2">Solution</strong>
+            <p>Clear task division and daily progress check-ins helped maintain alignment within the team and ensured a smooth workflow.</p>
           </div>
         </div>
-      </FadeIn>
+      </ProjectSection>
 
-      <FadeIn className="mb-12">
-        <h3 className="text-2xl font-bold text-primary mb-4 uppercase tracking-wider">Workflow</h3>
-        <WorkflowDiagram steps={["Storyboarding", "Set Building", "Lighting Setup", "Stop Motion Shooting", "Editing & Sound"]} />
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-          <img src="https://i.postimg.cc/JtWZFg2K/88e2f619-fe03-45e2-89f2-b0be9e95e196.jpg" alt="Workflow 1" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />
-          <img src="https://i.postimg.cc/MX8VL4Fd/90ea06e4-9be6-4656-bc37-028416fe4af3.jpg" alt="Workflow 2" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />
+      <ProjectSection title="Final Outcome">
+        <div className="text-gray-400 leading-relaxed text-lg space-y-4">
+          <p>
+            The final output was a short stop-motion film capturing the essence of a classroom crush.
+          </p>
+          <p>
+            The project successfully demonstrated skills in stop-motion animation, physical set design, visual storytelling, and team coordination. It provided valuable hands-on experience in managing a physical production pipeline from concept to final render.
+          </p>
         </div>
-      </FadeIn>
+      </ProjectSection>
 
       <FadeIn>
         <h3 className="text-2xl font-bold text-primary mb-8 uppercase tracking-wider text-center mt-12">Behind the Scenes & Stills</h3>

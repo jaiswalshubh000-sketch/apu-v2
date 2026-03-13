@@ -4,6 +4,7 @@ import { WorkflowDiagram } from "@/src/components/WorkflowDiagram";
 import { VideoPlayer } from "@/src/components/VideoPlayer";
 import { FadeIn } from "@/src/components/FadeIn";
 import { ProjectGantt } from "@/src/components/ProjectGantt";
+import { ProjectSection } from "@/src/components/ProjectSection";
 
 export function Bulgari() {
   return (
@@ -12,81 +13,141 @@ export function Bulgari() {
       title="BULGARI: Serpenti Necklace Ad"
       tagline="A cinematic AI-generated ad reverse-telling a theft."
     >
-      <ScopeGrid
-        items={[
-          { label: "Duration", value: "2 Weeks" },
-          { label: "Team", value: "Small Team" },
-          { label: "Output", value: "40-second Video Ad" },
-          { label: "Media", value: "AI Imagery, Video Editing" },
-        ]}
-      />
+      <ProjectSection title="Project Scope">
+        <ScopeGrid
+          items={[
+            { label: "Project Type", value: "AI-Generated Advertisement" },
+            { label: "Duration", value: "2 Weeks" },
+            { label: "Team Size", value: "Small Team" },
+            { label: "Role", value: "Visual Development & Prompt Design" },
+          ]}
+        />
+        <div className="mt-8 text-gray-400 leading-relaxed text-lg space-y-4">
+          <p>
+            This project involved creating an AI-generated advertisement concept for the luxury brand Bulgari, featuring the iconic Serpenti necklace.
+          </p>
+          <p>
+            The objective was to explore how artificial intelligence tools can be used to produce a cinematic luxury advertisement with minimal traditional production resources, utilizing AI imagery and video editing as the primary mediums.
+          </p>
+        </div>
+      </ProjectSection>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-        <FadeIn>
-          <h3 className="text-2xl font-bold text-primary mb-4 uppercase tracking-wider">Objective</h3>
-          <p className="text-gray-400 leading-relaxed text-lg mb-6">
-            Explore AI tools to create a luxury ad narrative, pushing the boundaries of generative storytelling.
-          </p>
-          <img src="https://i.postimg.cc/SJLGx4wL/247fcf0a-6455-4294-acdb-dcde02e2e7f5.jpg" alt="Bulgari Objective" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />
-        </FadeIn>
-        <FadeIn delay={0.2}>
-          <h3 className="text-2xl font-bold text-primary mb-4 uppercase tracking-wider">Concept</h3>
-          <p className="text-gray-400 leading-relaxed text-lg mb-6">
-            Reverse chronological crime story highlighting the Bulgari necklace, starting from the escape and ending at the heist.
-          </p>
+      <ProjectSection title="Creative Objective">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="text-gray-400 leading-relaxed text-lg space-y-4">
+            <p>
+              The creative direction was based on a luxury crime aesthetic, pushing the boundaries of generative storytelling.
+            </p>
+            <p>
+              The narrative shows a jewelry theft unfolding in reverse chronological order, starting from the escape and ending at the heist itself, highlighting the Bulgari necklace throughout the sequence.
+            </p>
+          </div>
           <img src="https://i.postimg.cc/9rPBQ2vt/34db7e0d-9877-4c7e-823f-3758ce343b1b.jpg" alt="Bulgari Concept" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />
-        </FadeIn>
-      </div>
+        </div>
+      </ProjectSection>
 
-      <FadeIn className="mb-12">
-        <h3 className="text-2xl font-bold text-primary mb-4 uppercase tracking-wider">Role & Team</h3>
+      <ProjectSection title="Roles & Responsibilities">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <p className="text-gray-400 leading-relaxed text-lg">
-            <strong className="text-white">Role:</strong> Visual Development & Prompt Design. Created AI art prompts and storyboards.
-          </p>
+          <div className="text-gray-400 leading-relaxed text-lg space-y-4">
+            <p><strong className="text-white">My Role:</strong> Visual Development & Prompt Design</p>
+            <p>Responsibilities included:</p>
+            <ul className="list-disc list-inside space-y-2 ml-4">
+              <li>Designing prompts for generating visual scenes using AI tools</li>
+              <li>Generating image assets through iterative prompt experimentation</li>
+              <li>Defining the shot composition and visual style of the advertisement</li>
+              <li>Directing the aesthetic tone of the crime-themed narrative</li>
+            </ul>
+          </div>
           <img src="https://i.postimg.cc/0bGCyvLY/4c49a71c-670d-4bbc-905b-b6cf7309dc25.jpg" alt="Bulgari Role" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />
         </div>
-      </FadeIn>
+      </ProjectSection>
 
-      <FadeIn className="mb-12">
-        <h3 className="text-2xl font-bold text-primary mb-4 uppercase tracking-wider">Workflow & Tools</h3>
+      <ProjectSection title="Production Timeline & Pipeline">
+        <div className="mb-8">
+          <h4 className="text-xl font-bold text-white mb-4">Pipeline</h4>
+          <div className="flex flex-wrap items-center gap-2 text-primary font-mono text-sm md:text-base">
+            <span>Concept</span>
+            <span>&darr;</span>
+            <span>Prompt Design</span>
+            <span>&darr;</span>
+            <span>Image Generation</span>
+            <span>&darr;</span>
+            <span>Editing & Compilation</span>
+            <span>&darr;</span>
+            <span>Sound Design</span>
+            <span>&darr;</span>
+            <span>Final Output</span>
+          </div>
+        </div>
+
+        <h4 className="text-xl font-bold text-white mb-4">Timeline</h4>
+        <div className="space-y-6 text-gray-400 leading-relaxed text-lg mb-8">
+          <div>
+            <strong className="text-white block mb-2">Week 1 – Concept & Prompt Design</strong>
+            <ul className="list-disc list-inside ml-4">
+              <li>Concept development and narrative structuring</li>
+              <li>Prompt engineering and visual planning</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="text-white block mb-2">Week 2 – Production & Post Production</strong>
+            <ul className="list-disc list-inside ml-4">
+              <li>AI Image generation and asset curation</li>
+              <li>Video editing and sequence compilation</li>
+              <li>Sound design and final rendering</li>
+            </ul>
+          </div>
+        </div>
+
         <ProjectGantt 
           totalWeeks={2}
           tasks={[
-            { name: "Concept", startWeek: 0, durationWeeks: 0.5 },
+            { name: "Concept & Prompts", startWeek: 0, durationWeeks: 1 },
             { name: "AI Generation", startWeek: 0.5, durationWeeks: 1 },
-            { name: "Editing", startWeek: 1.5, durationWeeks: 0.5 }
+            { name: "Editing & Sound", startWeek: 1.5, durationWeeks: 0.5 }
           ]} 
         />
-        <div className="mt-8">
-          <WorkflowDiagram steps={["Ideation", "Prompt Engineering", "AI Generation", "Video Editing"]} />
-        </div>
-        <p className="text-gray-400 leading-relaxed mt-4 font-mono text-sm mb-6">
-          Tools: ChatGPT (concept), Midjourney (Nano Banana, Flow) for images, Suno AI for audio, After Effects for editing.
+      </ProjectSection>
+
+      <ProjectSection title="Deliverables">
+        <p className="text-gray-400 leading-relaxed text-lg mb-6">
+          40-second AI-generated advertisement showcasing the Bulgari Serpenti necklace through a cinematic reverse-crime narrative.
         </p>
-        <img src="https://i.postimg.cc/bGr0gtdw/9c40128f-c9e9-4e07-b77e-31ec4ab98856.jpg" alt="Bulgari Workflow" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />
-      </FadeIn>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-        <FadeIn>
-          <h3 className="text-2xl font-bold text-primary mb-4 uppercase tracking-wider">Challenges & Solutions</h3>
-          <ul className="list-disc list-inside text-gray-400 leading-relaxed text-lg space-y-2 mb-6">
-            <li><strong className="text-white">Maintaining brand style:</strong> Iterated heavily on prompts to ensure the luxury aesthetic of Bulgari was preserved across all AI generations.</li>
-          </ul>
-          <img src="https://i.postimg.cc/qzcGvr9x/ec4a2aac-a9f6-4320-b294-704471ccfe52.jpg" alt="Bulgari Challenges" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />
-        </FadeIn>
-        <FadeIn delay={0.2}>
-          <h3 className="text-2xl font-bold text-primary mb-4 uppercase tracking-wider">Reflection</h3>
-          <p className="text-gray-400 leading-relaxed text-lg">
-            Learned about AI-driven cinematics, prompt engineering for consistency, and creative direction in a purely digital, generative pipeline.
-          </p>
-        </FadeIn>
-      </div>
-
-      <FadeIn>
-        <h3 className="text-2xl font-bold text-primary mb-8 uppercase tracking-wider text-center">Final Output</h3>
         <VideoPlayer url="https://www.youtube.com/embed/Ef_Xpqkui-4" />
-      </FadeIn>
+      </ProjectSection>
+
+      <ProjectSection title="Tools & Software Used">
+        <ul className="list-disc list-inside text-gray-400 leading-relaxed text-lg space-y-2">
+          <li><strong className="text-white">ChatGPT</strong> – Concept and narrative development</li>
+          <li><strong className="text-white">Nano Banana / Flow</strong> – AI Image generation</li>
+          <li><strong className="text-white">Suno AI</strong> – AI-generated music and audio</li>
+          <li><strong className="text-white">Adobe After Effects</strong> – Video compilation, editing, and compositing</li>
+        </ul>
+      </ProjectSection>
+
+      <ProjectSection title="Challenges & Solutions">
+        <div className="space-y-6 text-gray-400 leading-relaxed text-lg">
+          <div>
+            <strong className="text-white block mb-2">Challenge</strong>
+            <p>Maintaining brand style and consistency across AI-generated frames was difficult, as generative tools often introduce unwanted variations.</p>
+          </div>
+          <div>
+            <strong className="text-white block mb-2">Solution</strong>
+            <p>Iterated heavily on prompts and utilized specific style keywords to ensure the luxury aesthetic of Bulgari was preserved across all AI generations.</p>
+          </div>
+        </div>
+      </ProjectSection>
+
+      <ProjectSection title="Final Outcome">
+        <div className="text-gray-400 leading-relaxed text-lg space-y-4">
+          <p>
+            The final output was a 40-second experimental AI-generated advertisement combining AI-generated visuals, AI-produced music, and digital editing.
+          </p>
+          <p>
+            The project successfully demonstrated skills in AI prompt design, generative concept development, and visual storytelling. It provided valuable learnings about AI-driven cinematics, prompt engineering for consistency, and creative direction in a purely digital, generative pipeline.
+          </p>
+        </div>
+      </ProjectSection>
     </ProjectLayout>
   );
 }
