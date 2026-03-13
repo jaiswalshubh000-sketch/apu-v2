@@ -161,16 +161,17 @@ export function Home() {
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4 uppercase leading-none">
               Apurva Rai
             </h1>
-            <p className="text-xl md:text-2xl text-primary font-mono mb-6 uppercase tracking-widest">
-              Animator & Visual Storyteller
+            <p className="text-xl md:text-2xl text-primary font-mono mb-2 uppercase tracking-widest">
+              Creative Producer | Project Coordination
+            </p>
+            <p className="text-md md:text-lg text-gray-400 font-mono mb-6 uppercase tracking-wider">
+              3D Pipeline | Visual Media
             </p>
           </FadeIn>
           
           <FadeIn delay={0.4}>
-            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-              Creativity isn't just an art; it's my way of interpreting the world. <br/>
-              A design student passionate about animation, illustration, and fashion design. <br/>
-              Blending traditional storytelling with modern digital tools.
+            <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+              I focus on the architecture of creative projects—orchestrating ideas, driving team collaboration, and delivering visual outcomes through efficient workflows. With a background in animation, I have directed everything from stop-motion films to experimental media. I thrive at the intersection of creativity and organization, guiding design-driven projects seamlessly from early concept to final execution.
             </p>
           </FadeIn>
 
