@@ -317,7 +317,7 @@ export function Home() {
             <FadeIn delay={0.2}>
               <Link to="/projects/technical" className="block group">
                 <div className="rounded-xl overflow-hidden border border-white/10 relative aspect-video shadow-2xl">
-                  <img src="https://drive.google.com/uc?export=view&id=1-wkDFP8V32oTcNBBiBv6gzzDSGBjVBJD" alt="Technical Projects" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
+                  <img src="https://drive.google.com/thumbnail?id=1-wkDFP8V32oTcNBBiBv6gzzDSGBjVBJD&sz=w1920" alt="Technical Projects" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <span className="text-white font-bold uppercase tracking-widest border border-white px-6 py-2 rounded-full backdrop-blur-sm">Explore Gallery</span>
                   </div>

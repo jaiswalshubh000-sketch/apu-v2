@@ -93,7 +93,7 @@ const rawUrls = [
 
 const getImgSrc = (url: string) => {
   const match = url.match(/\/d\/(.*?)\//);
-  return match ? `https://drive.google.com/uc?export=view&id=${match[1]}` : url;
+  return match ? `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1920` : url;
 };
 
 const images = rawUrls.map(getImgSrc);
