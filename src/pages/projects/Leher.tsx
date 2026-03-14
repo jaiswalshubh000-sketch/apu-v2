@@ -136,6 +136,28 @@ export function Leher() {
         </div>
       </ProjectSection>
 
+      <ProjectSection title="Process & Experimentation">
+        <p className="text-gray-400 leading-relaxed text-lg mb-8">
+          During the development of Leher, several animation experiments were conducted to explore motion, weight, and fluid dynamics. These tests helped shape the final visual language of the film.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <h4 className="text-xl font-bold text-white">Ocean Animation Experiment</h4>
+            <p className="text-gray-400 text-sm font-mono">Exploring fluid motion and character dynamics through 2D and 3D techniques.</p>
+            <div className="rounded-xl overflow-hidden border border-white/10">
+              <VideoPlayer url="https://www.youtube.com/embed/5ViDti_Ly4k" />
+            </div>
+          </div>
+          <div className="space-y-4">
+            <h4 className="text-xl font-bold text-white">Bot Walking Animation</h4>
+            <p className="text-gray-400 text-sm font-mono">A mechanical walk cycle study conveying heavy machinery with a smooth gait.</p>
+            <div className="rounded-xl overflow-hidden border border-white/10">
+              <VideoPlayer url="https://www.youtube.com/embed/4V5Iz99Qpks" />
+            </div>
+          </div>
+        </div>
+      </ProjectSection>
+
       <ProjectSection title="Final Outcome">
         <div className="text-gray-400 leading-relaxed text-lg space-y-4">
           <p>

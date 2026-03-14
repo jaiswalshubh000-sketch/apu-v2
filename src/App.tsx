@@ -11,7 +11,7 @@ import { Leher } from "./pages/projects/Leher";
 import { Nivara } from "./pages/projects/Nivara";
 import { Bulgari } from "./pages/projects/Bulgari";
 import { Jhapki } from "./pages/projects/Jhapki";
-import { Animation3D } from "./pages/projects/Animation3D";
+import { TechnicalProjects } from "./pages/projects/TechnicalProjects";
 import { Contact } from "./pages/Contact";
 
 function ScrollToTop() {
@@ -37,7 +37,7 @@ export default function App() {
             <Route path="/projects/nivara" element={<Nivara />} />
             <Route path="/projects/bulgari" element={<Bulgari />} />
             <Route path="/projects/jhapki" element={<Jhapki />} />
-            <Route path="/projects/animation-3d" element={<Animation3D />} />
+            <Route path="/projects/technical" element={<TechnicalProjects />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
